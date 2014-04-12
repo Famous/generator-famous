@@ -159,10 +159,27 @@ var FamousGenerator = yeoman.generators.Base.extend({
     this.mkdir('app/content');
     this.mkdir('app/content/images');
     this.mkdir('app/src');
+    this.mkdir('grunt');
 
     this.template('README.md', 'README.md');
     this.template('_package.json', 'package.json');
     this.template('_bower.json', 'bower.json');
+    
+    this.template('grunt/_config.js', 'grunt/config.js');
+    this.template('grunt/_eslint.js', 'grunt/eslint.js');
+    this.template('grunt/_jscs.js', 'grunt/jscs.js');
+    this.template('grunt/_watch.js', 'grunt/watch.js');
+    this.template('grunt/_connect.js', 'grunt/connect.js');
+    this.template('grunt/_clean.js', 'grunt/clean.js');
+    this.template('grunt/_bower.js', 'grunt/bower.js');
+    this.template('grunt/_rev.js', 'grunt/rev.js');
+    this.template('grunt/_processhtml.js', 'grunt/processhtml.js');
+    this.template('grunt/useminPrepare_.js', 'grunt/useminPrepare.js');
+    this.template('grunt/_usemin.js', 'grunt/usemin.js');
+    this.template('grunt/_htmlmin.js', 'grunt/htmlmin.js');
+    this.template('grunt/_copy.js', 'grunt/copy.js');
+    this.template('grunt/_requirejs.js', 'grunt/requirejs.js');
+    
     this.copy('_Gruntfile.js', 'Gruntfile.js');
     this.template('_index.html', 'app/index.html');
     
